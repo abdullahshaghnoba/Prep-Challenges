@@ -133,7 +133,7 @@ const cvFormatter = (arr) => {
 const applicationsStatics = (arr) => {
     // write your code here
     const res1 = arr.filter((element) => {
-        if (element.firstName == null && element.lastName == null || element.yearsOfExperience <= 1) {
+        if ((element.firstName == null && element.lastName == null) || element.yearsOfExperience <= 1) {
             return false
         }
         return true
