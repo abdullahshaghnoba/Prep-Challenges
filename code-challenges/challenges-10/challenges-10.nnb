@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function birthdayCakeCandles(candles) {\n    // Write your code here\n    let max = 0;\n    let arr = [];\n    let arrRes = [];\n    candles.forEach((element) => {\n        if (element >= max) {\n            max = element\n            arr.push(max);\n        }\n    })\n    arr.forEach((element1) => {\n        if (element1 >= max) {\n            max = element1\n            arrRes.push(max);\n        }\n    })\n    return arrRes.length;\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Compare The Triplets](https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function compareTriplets(a, b) {\n    let aCounter = 0;\n    let bCounter = 0;\n    let arrRes = [];\n    a.forEach((element, index) => {\n        if (element > b[index]) {\n            aCounter++;\n        } else if (element < b[index]) {\n            bCounter++\n        }\n    })\n    arrRes.push(aCounter, bCounter);\n\n    return arrRes\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Migratory Birds](https://www.hackerrank.com/challenges/migratory-birds/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function migratoryBirds(arr) {\n    // Write your code here\n    let c1 = 0;\n    let c2 = 0;\n    let c3 = 0;\n    let c4 = 0;\n    let c5 = 0;\n    let maxLow = 0;\n    let maxHigh = 0;\n    let result = 0;\n    let x = 0;\n    arr.forEach((element) => {\n        switch (element) {\n            case 1:\n                c1++;\n                break;\n            case 2:\n                c2++;\n                break;\n            case 3:\n                c3++;\n                break;\n            case 4:\n                c4++;\n                break;\n            case 5:\n                c5++;\n                break;\n        }\n    })\n    let objOfC = {\n        1: c1,\n        2: c2,\n        3: c3,\n        4: c4,\n        5: c5\n    };\n    for (const property in objOfC) {\n        if (objOfC[property] >= maxLow) {\n            maxLow = objOfC[property]\n            result = property\n        }\n    }\n    delete objOfC[result]\n    for (const prop in objOfC) {\n        if (objOfC[prop] >= maxHigh) {\n            maxHigh = objOfC[prop]\n            x = prop;\n        }\n    }\n\n    if (maxLow > maxHigh) {\n        return result;\n    } else if (maxHigh > maxLow) {\n        return x;\n    } else if (maxHigh === maxLow) {\n        if (result > x) {\n            return x;\n        } else {\n            return result;\n        }\n    }\n\n}"
+            ],
+            "outputs": []
+        }
+    ]
+}
