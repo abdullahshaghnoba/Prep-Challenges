@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Equality In An Array](https://www.hackerrank.com/challenges/equality-in-a-array/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function equalizeArray(arr) {\n    // Write your code here\n    let obj = {};\n    for (let i = 0; i < arr.length; i++) {\n      if (!obj[arr[i]]) {\n        obj[arr[i]] = 1;\n      } else {\n        obj[arr[i]]++;\n      }\n    }\n    let maxRepNum = 0;\n    for (const property in obj) {\n      if (obj[property] > maxRepNum) {\n        maxRepNum = obj[property];\n      }\n    }\n    return arr.length - maxRepNum;\n  }"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Halloween Sale](https://www.hackerrank.com/challenges/halloween-sale/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function howManyGames(p, d, m, s) {\n    // Return the number of games you can buy\n    let count = 0;\n    if (s >= p) {\n        s = s - p;\n        count += 1;\n    } else { return count; }\nif (s>p-d){\n    while (s >= m) {\n        if (p - d > m) {\n            p -= d;\n            s = s - p;\n            count += 1;\n        } else if (p - d <= m) {\n            s -= m;\n            count += 1;\n        }\n    }\n}\nreturn count;\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Sherlock And Squares](https://www.hackerrank.com/challenges/sherlock-and-squares/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function squares(a, b) {\n    // Write your code here\n    let res = 0;\n    let aSqrtRes = Math.floor(Math.sqrt(a));\n    let bSqrtRes = Math.ceil(Math.sqrt(b));\n    // res = bSqrtRes - aSqrtRes;\n \n    if (Number.isInteger(Math.sqrt(a))&&a!=b) { res++; }\n     if (Number.isInteger(Math.sqrt(b))&&a!=b) { res++; }\n   if(a==b&&Number.isInteger(Math.sqrt(a))){res++;}\n    //    let firstNum =   Math.round(aSqrtRes);\n    //    let secondNum =   Math.round(bSqrtRes);\n    if (bSqrtRes - aSqrtRes > 1) {\n        aSqrtRes++;\n        while (aSqrtRes < bSqrtRes) {\n            aSqrtRes++;\n            res++;\n        }\n\n    }\n\n    return res;\n}"
+            ],
+            "outputs": []
+        }
+    ]
+}
