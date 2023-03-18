@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Append And Delete](https://www.hackerrank.com/challenges/append-and-delete/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function appendAndDelete(s, t, k) {\n    // Write your code here\n    let firstArr = s.split(\"\");\n    let secondArr = t.split(\"\");\n    let def = 0;\n    let def2 = 0;\n    let count = 0;\n    let lastNum = 0;\n    let uniqueNum = 0;\n    let numAdded = 0;\n    if (firstArr.length >= secondArr.length) {\n        def = firstArr.length - secondArr.length;\n        for (let i = 0; i < def; i++) {\n            firstArr.pop();\n            count += 1;\n        }\n        console.log(count)\n        let resArr = firstArr.map((e, i) => {\n            if (e == secondArr[i]) {\n                return \"yes\";\n            } else { return \"no\" }\n        })\n        if (resArr.includes(\"no\")) {\n            uniqueNum = resArr.length - resArr.indexOf('no')\n        }\n        console.log(resArr.length)\n        lastNum = uniqueNum * 2;\n        count += lastNum;\n        console.log(count)\n        if (count <= k) {\n            return \"Yes\"\n        } else { return \"No\" }\n    } else if (firstArr.length < secondArr.length) {\n        def2 = secondArr.length - firstArr.length;\n        let resArr2 = secondArr.map((e, i) => {\n            if (e == firstArr[i]) {\n                return \"yes\";\n            } else { return \"no\" }\n        })\n        if (resArr2.includes(\"no\")) {\n            uniqueNum = firstArr.length - resArr2.indexOf('no')\n        }\n        console.log(count)\n        console.log(resArr2.length)\n        lastNum = uniqueNum * 2;\n        numAdded = lastNum + resArr2.length - firstArr.length\n        count += numAdded;\n        console.log(count)\n        if ((k - count) % 2 == 0) {\n            if (count <= k) {\n                return \"Yes\"\n            } else { return \"No\" }\n        } else {\n            return \"No\";\n        }\n    }\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Encryption](https://www.hackerrank.com/challenges/encryption/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [The Time In Words](https://www.hackerrank.com/challenges/the-time-in-words/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
